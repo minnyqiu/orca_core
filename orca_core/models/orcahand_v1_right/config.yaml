@@ -1,10 +1,11 @@
 version: 0.2.1
 baudrate: 3000000
 #port: /dev/ttyUSB0 # linux
-port: /dev/tty.usbserial-FT9MISJT # mac
+# port: /dev/tty.usbserial-FT9MISJT # mac
+port: /dev/tty.usbserial-FTAAMMJU # minny
 max_current: 400
 
-type: right
+type: left #right
 
 # current, velocity, position, multi-turn- position, current_based_position
 control_mode: current_based_position
@@ -14,22 +15,22 @@ joint_ids: [thumb_mcp, thumb_abd, thumb_pip, thumb_dip, index_abd, index_mcp, in
 
 # Which motor ID is physically connected to which joint
 joint_to_motor_map:
-  thumb_mcp: -4
-  thumb_abd: -3
-  thumb_pip: -1
-  thumb_dip: -2
-  index_abd: 14
-  index_mcp: -15
-  index_pip: -16
-  middle_abd: 13
-  middle_mcp: -8
-  middle_pip: -9
-  ring_abd: -5
-  ring_mcp: -7
-  ring_pip: -6
-  pinky_abd: 12
-  pinky_mcp: -10
-  pinky_pip: -11
+  thumb_mcp: 13 #-4
+  thumb_abd: 14 #-3
+  thumb_pip: -16 #-1
+  thumb_dip: -15 #-2
+  index_abd: 3 #14
+  index_mcp: 2 #-15
+  index_pip: 1 #-16
+  middle_abd: 4 #13
+  middle_mcp: 9 #-8
+  middle_pip: 8 #-9
+  ring_abd: -12 #-5
+  ring_mcp: 10 #-7
+  ring_pip: 11 #-6
+  pinky_abd: 5 #12
+  pinky_mcp: 7 #-10
+  pinky_pip: 6 #-11
   wrist: -17
 
 joint_roms:
@@ -72,7 +73,7 @@ neutral_position:
 
 calib_current: 350
 calib_step_size: 0.1
-calib_step_period: 0.001
+calib_step_period: 0.001 # 每步的间隔
 calib_num_stable: 10  # should be period * num_stable > 1
 calib_threshold: 0.01
 
