@@ -86,3 +86,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# example usage:
+# python scripts/replay_continuous.py orca_core/models/orcahand_v1_right --replay_file replay_sequences/7_continuous_angles_20260123_133627.yaml
