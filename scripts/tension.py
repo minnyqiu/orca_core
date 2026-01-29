@@ -1,5 +1,5 @@
 import argparse
-from orca_core.core import OrcaHand
+from orca_core import OrcaHand
 import time
 import numpy as np
 
