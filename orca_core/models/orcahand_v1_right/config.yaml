@@ -31,7 +31,7 @@ joint_to_motor_map:
   pinky_abd: 5 #12
   pinky_mcp: 7 #-10
   pinky_pip: 6 #-11
-  wrist: -17
+  wrist: 17
 
 joint_roms:
   thumb_mcp: [-50, 50]
