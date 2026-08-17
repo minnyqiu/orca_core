@@ -126,9 +126,19 @@ urdf/
 
 dev_scripts/
 
-orca_core/models/*
-
 # macOS
 .DS_Store
 
 .pytest_cache/
+
+# Per-hand calibration output (machine-specific, not committed)
+calibration.yaml
+
+# Generated soak-test output (metrics.csv, progress.png)
+soak_logs/
+
+# Scratch worktrees created by agent sessions
+.claude/
+
+# Local model configurations
+orca_core/models/*
