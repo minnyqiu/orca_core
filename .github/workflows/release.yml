@@ -10,6 +10,9 @@ on:
 jobs:
   check:
     name: Decide whether to release
+    # Publishing credentials belong to the upstream project. Forks must never
+    # build or publish a release merely because their main branch was updated.
+    if: github.repository == 'orcahand/orca_core'
     runs-on: ubuntu-latest
     outputs:
       should_release: ${{ steps.decide.outputs.should_release }}
